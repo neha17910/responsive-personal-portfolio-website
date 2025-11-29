@@ -1,0 +1,272 @@
+<!-- 
+Name: Neha 
+Roll No: 2501730466 
+Web Dev Assignment – Final Portfolio with Arrow
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins", sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+    color:#222;
+    scroll-behavior:smooth;
+}
+
+/* HEADER */
+header{
+    background:#0b4faa;
+    color:white;
+    padding:1rem 2rem;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+header nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:1.5rem;
+    transition:0.3s;
+}
+header nav a:hover{
+    color:#ffe082;
+}
+
+/* HERO */
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:3rem 2rem;
+    background:white;
+}
+.hero-text h3{
+    font-size:1.4rem;
+}
+.hero-text h1{
+    font-size:3rem;
+    color:#ff7043;
+    animation:colorChange 3s infinite;
+}
+@keyframes colorChange{
+    0%{color:#ff7043;}
+    50%{color:#42a5f5;}
+    100%{color:#ff7043;}
+}
+.hero-text p{
+    margin-top:0.5rem;
+    color:#555;
+}
+.hero img{
+    width:250px;
+}
+
+/* COMMON SECTIONS */
+section{
+    padding:3rem 2rem;
+}
+h2{
+    margin-bottom:1rem;
+    color:#0b4faa;
+}
+
+/* SKILLS */
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1rem;
+}
+.card{
+    background:#0b4faa;
+    color:white;
+    padding:1.2rem;
+    text-align:center;
+    border-radius:8px;
+    transition:0.3s;
+}
+.card:hover{
+    background:#083c82;
+    transform:scale(1.05);
+}
+.card span{
+    display:block;
+    margin-top:0.3rem;
+    font-size:0.9rem;
+}
+
+/* PROJECTS */
+.project-card{
+    background:white;
+    border-left:5px solid #0b4faa;
+    padding:1.3rem;
+    margin-top:1rem;
+    border-radius:8px;
+}
+
+/* CONTACT FORM */
+form{
+    max-width:350px;
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+}
+form input, form textarea{
+    padding:0.9rem;
+    border-radius:5px;
+    border:1px solid gray;
+}
+button{
+    padding:0.9rem;
+    background:#0b4faa;
+    color:white;
+    border:none;
+    border-radius:5px;
+    transition:0.3s;
+}
+button:hover{
+    background:#083c82;
+}
+
+/* FOOTER */
+footer{
+    background:#0b4faa;
+    color:white;
+    padding:1rem;
+    text-align:center;
+    position:relative;
+}
+
+/* BACK TO TOP BUTTON WITH ARROW */
+.back-top{
+    position:absolute;
+    right:20px;
+    top:50%;
+    transform:translateY(-50%);
+    background:white;
+    padding:6px 14px;
+    color:#0b4faa;
+    text-decoration:none;
+    font-weight:600;
+    border-radius:4px;
+    border:1px solid white;
+    display:flex;
+    align-items:center;
+    gap:5px;
+    transition:0.3s;
+    font-size:0.9rem;
+}
+
+.back-top:hover{
+    background:#e3e8ff;
+}
+
+/* Arrow styling */
+.back-top .arrow{
+    font-size:1rem;
+    font-weight:bold;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+    .skills-grid{
+        grid-template-columns:1fr;
+    }
+    .back-top{
+        position:static;
+        margin-top:10px;
+        display:inline-block;
+    }
+}
+</style>
+
+</head>
+<body id="top">
+
+<header>
+    <h2>My Portfolio</h2>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-text">
+        <h3>Hi, I am</h3>
+        <h1>Full Stack Developer</h1>
+        <p>Building modern web applications with MERN stack.</p>
+    </div>
+
+    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+</section>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        I am a student learning web development. This is my portfolio website 
+        where I showcase my skills and beginner-level projects.
+    </p>
+</section>
+
+<section id="skills">
+    <h2>My Skills</h2>
+    <div class="skills-grid">
+        <div class="card">HTML <span>Beginner</span></div>
+        <div class="card">CSS <span>Beginner</span></div>
+        <div class="card">JavaScript <span>Learning</span></div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>My Projects</h2>
+
+    <div class="project-card">
+        <h3>Project 1</h3>
+        <p>A simple HTML & CSS webpage.</p>
+    </div>
+
+    <div class="project-card">
+        <h3>Project 2</h3>
+        <p>Another responsive mini-project.</p>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <form>
+        <input type="text" placeholder="Enter your name">
+        <input type="email" placeholder="Enter your email">
+        <textarea placeholder="Write your message"></textarea>
+        <button type="submit">Send</button>
+    </form>
+</section>
+
+<footer>
+    © 2024 – Neha. All Rights Reserved.
+    
+    <!-- Back to Top with Arrow ↑ -->
+    <a href="#top" class="back-top">
+        <span class="arrow">↑</span> Back to Top
+    </a>
+</footer>
+
+</body>
+</html>
